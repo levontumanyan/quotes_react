@@ -35,7 +35,7 @@ function Reviews() {
         return <div>Loading...</div>;
     } else {
         return (
-            <ul>
+            <ul style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap' }}>
                 {reviews.map(review => (
                     <Review key={review._id} data={review} />
                 ))}
