@@ -10,7 +10,6 @@ function Rating(props) {
 
     async function postUpvote(url = `https://quotes-api-fib.herokuapp.com/rate_quote/${props.id}/upvote`) {
         // Default options are marked with *
-        //console.log(props.id);
         const response = await fetch(url, {
             method: 'POST',
             mode: 'cors' // no-cors, *cors, same-origin
@@ -20,7 +19,6 @@ function Rating(props) {
 
     async function postDownvote(url = `https://quotes-api-fib.herokuapp.com/rate_quote/${props.id}/downvote`) {
         // Default options are marked with *
-        //console.log(props.id);
         const response = await fetch(url, {
             method: 'POST',
             mode: 'cors' // no-cors, *cors, same-origin
@@ -30,8 +28,8 @@ function Rating(props) {
 
     return (
         <div>
-            <IoIosThumbsUp onClick={function () { setRating(rating + 1); postUpvote(); setnumOfReviews(numOfReviews + 1) }} />
-            <IoMdThumbsDown onClick={function () { setRating(rating - 1); postDownvote(); setnumOfReviews(numOfReviews + 1) }} />
+            <IoIosThumbsUp style={{ cursor: 'pointer', marginBottom: '1%' }} onClick={function () { setRating(rating + 1); postUpvote(); setnumOfReviews(numOfReviews + 1) }} />
+            <IoMdThumbsDown style={{ cursor: 'pointer', marginBottom: '1%' }} onClick={function () { setRating(rating - 1); postDownvote(); setnumOfReviews(numOfReviews + 1) }} />
             <h1>{rating}</h1>
             <h4>Reviewed, {numOfReviews} times</h4>
         </div>
