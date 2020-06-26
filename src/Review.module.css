@@ -1,0 +1,31 @@
+/* @media only screen and (max-width: 600px) {
+    .review_card {
+        background-color: lightblue;
+        
+    }
+} */
+
+@media only screen and (min-width: 801px) {
+    .reviews_card {
+        user-select: none;
+        max-width: 25%;
+        margin-top: 10px;
+        margin-right : 10px;
+        margin-left : 10px;
+        flex: 1 1 20%;
+        background-color: #a1f2f2;
+    }
+}
+
+
+@media only screen and (max-width: 801px) {
+    .reviews_card {
+        user-select: none;
+        margin-top: 10px;
+        margin-right : 10px;
+        margin-left : 10px;
+        background-color: #a1f2f2;
+    }
+}
+
+

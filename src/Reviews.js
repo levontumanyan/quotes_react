@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Review from './Review';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import styles from './Reviews.module.css';
 const fetch = require('node-fetch');
 
 function Reviews() {
@@ -35,7 +36,7 @@ function Reviews() {
         return <div>Loading...</div>;
     } else {
         return (
-            <ul style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap' }}>
+            <ul className={styles.reviews_ul}>
                 {reviews.map(review => (
                     <Review key={review._id} data={review} />
                 ))}

@@ -2,10 +2,11 @@ import React from 'react';
 import Card from 'react-bootstrap/Card';
 import Rating from './Rating';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import styles from './Review.module.css';
 
 function Review(props) {
     return (
-        <Card style={{ userSelect: "none", width: '25%', marginTop: '10px', marginRight: '10px', flex: '1 1 20%', backgroundColor: '#a1f2f2' }}>
+        <Card className={styles.reviews_card}>
             <Card.Body>
                 <Card.Title>{props.data.author}</Card.Title>
                 <Card.Text> {props.data.body} </Card.Text>
